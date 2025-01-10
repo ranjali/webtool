@@ -12,9 +12,9 @@ function toggleSidebar() {
         main.style.marginLeft == "250px" ? "0" : "250px";
     } else {
         // Mobile behavior (resize vertically)
-        sidebar.style.width = 
-        sidebar.style.width == "250px" ? "0" : "250px";
+        sidebar.style.height = 
+        sidebar.style.height == "100vh" ? "0" : "100vh";
         main.style.marginTop = 
-        main.style.marginTop == "250px" ? "0" : "250px";
+        main.style.marginTop == "100vh" ? "0" : "100vh";
     }
 }
