@@ -19,12 +19,17 @@ body {
   overflow-x: hidden;
   transition: 0.3s;
   padding-top: 60px;
+  display: none; /* Hide the sidebar initially */
+}
+
+.sidebar.open {
+  display: block; /* Show the sidebar when it has the 'open' class */
 }
 
 .sidebar a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 18px;
   color: #2196F3;
   display: block;
 }
@@ -34,23 +39,28 @@ body {
 }
 
 .main {
-  margin-left: 250px; 
   padding: 0px 10px;
-  transition: margin-left 0.3s; 
+  transition: margin-left 0.3s;
 }
 
 /* Responsive sidebar */
 @media screen and (max-width: 768px) { 
   .sidebar {
-    width: 100%; 
-    height: auto;
-    position: relative; 
-  }
-  .sidebar a {
-    float: left;
     width: 100%;
-    text-align: center;
+    height: auto;
+    position: relative;
+    display: none; /* Hide on mobile until toggled */
   }
+
+  .sidebar.open {
+    display: block; /* Show when toggled on mobile */
+  }
+
+  .sidebar a {
+    text-align: center;
+    padding: 10px;
+  }
+
   .main {
     margin-left: 0;
   }
@@ -86,10 +96,8 @@ body {
 
 <script>
 function toggleSidebar() {
-  document.getElementsByClassName("sidebar")[0].style.width = 
-  document.getElementsByClassName("sidebar")[0].style.width == "250px" ? "0" : "250px";
-  document.getElementsByClassName("main")[0].style.marginLeft = 
-  document.getElementsByClassName("main")[0].style.marginLeft == "250px" ? "0" : "250px";
+  var sidebar = document.getElementsByClassName("sidebar")[0];
+  sidebar.classList.toggle("open");
 }
 </script>
 
