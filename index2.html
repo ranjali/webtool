@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh; /* Use vh for viewport height */
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px; 
+  color: #2196F3;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #000;
+}
+
+.main {
+  margin-left: 250px; 
+  padding: 0px 10px;
+  transition: margin-left 0.3s; 
+}
+
+/* Responsive sidebar */
+@media screen and (max-width: 768px) { 
+  .sidebar {
+    width: 100%; 
+    height: auto;
+    position: relative; 
+  }
+  .sidebar a {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+  .main {
+    margin-left: 0;
+  }
+}
+
+/* Toggle button */
+.toggle-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #111;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="#">Item 1</a>
+  <a href="#">Item 2</a>
+</div>
+
+<div class="main">
+  <h2>My Page</h2>
+  <p>This is the main content.</p>
+</div>
+
+<button class="toggle-btn" onclick="toggleSidebar()">&#9776;</button> 
+
+<script>
+function toggleSidebar() {
+  document.getElementsByClassName("sidebar")[0].style.width = 
+  document.getElementsByClassName("sidebar")[0].style.width == "250px" ? "0" : "250px";
+  document.getElementsByClassName("main")[0].style.marginLeft = 
+  document.getElementsByClassName("main")[0].style.marginLeft == "250px" ? "0" : "250px";
+}
+</script>
+
+</body>
+</html>
