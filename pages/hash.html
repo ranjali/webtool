@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hash</title>
+    <title>Tool - Hash</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <div id="header">
-        <button id="menu-toggle">Menu</button>
-        <h1>Hash</h1>
-    </div>
-    <div id="sidebar">
+    <div class="sidebar">
         <a href="../pages/base64-hex.html">Base64 - Hex</a>
-        <a href="../pages/hash.html" class="active">Hash</a>
+        <a href="../pages/hash.html">Hash</a>
     </div>
-    <div id="content">
+    <div class="main">
         <div class="box">
             <div class="box-title">Algorithm</div>
             <select id="hash-algorithm">
@@ -35,12 +31,13 @@
             <div class="box-title">Input</div>
             <textarea id="hash-input" placeholder="Enter input..."></textarea>
         </div>
-        <button id="hash-compute">Hash</button>
+        <button class="button" id="hash-compute">Hash</button>
         <div class="box">
             <div class="box-title">Output</div>
             <textarea id="hash-output" placeholder="Output will appear here..." readonly></textarea>
         </div>
     </div>
+    <button class="toggle-btn" onclick="toggleSidebar()">&#9776;</button> 
     <script src="../js/common.js"></script>
     <script src="../js/hash.js"></script>
 </body>

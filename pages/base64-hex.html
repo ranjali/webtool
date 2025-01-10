@@ -7,27 +7,24 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <div id="header">
-        <button id="menu-toggle">Menu</button>
-        <h1>Base64 - Hex</h1>
-    </div>
-    <div id="sidebar">
-        <a href="../pages/base64-hex.html" class="active">Base64 - Hex</a>
+    <div class="sidebar">
+        <a href="../pages/base64-hex.html">Base64 - Hex</a>
         <a href="../pages/hash.html">Hash</a>
     </div>
-    <div id="content">
+    <div class="main">
         <div class="box">
             <div class="box-title">Base64</div>
             <textarea id="base64-input" placeholder="Enter Base64 string..."></textarea>
         </div>
-        <button id="base64-to-hex">Base64 -> Hex</button>
-        <button id="hex-to-base64">Hex -> Base64</button>
+        <button class="button" id="base64-to-hex">Base64 -> Hex</button>
+        <button class="button" id="hex-to-base64">Hex -> Base64</button>
         <div class="box">
             <div class="box-title">Hex String</div>
             <textarea id="hex-input" placeholder="Hex string will appear here..."></textarea>
         </div>
     </div>
+    <button class="toggle-btn" onclick="toggleSidebar()">&#9776;</button> 
     <script src="../js/common.js"></script>
-    <script src="../js/base64-hex.js"></script>
+    <script src="../js/hash.js"></script>
 </body>
 </html>

@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="header">
-        <button id="menu-toggle">Menu</button>
-        <h1>Web Tool</h1>
-    </div>
-    <div id="sidebar">
+    <div class="sidebar">
         <a href="pages/base64-hex.html">Base64 - Hex</a>
         <a href="pages/hash.html">Hash</a>
     </div>
+
+    <div class="main">
+        <h2>Web Tool</h2>
+        <p>Tool for daily developers</p>
+    </div>
+    <button class="toggle-btn" onclick="toggleSidebar()">&#9776;</button> 
     <script src="js/common.js"></script>
 </body>
 </html>
